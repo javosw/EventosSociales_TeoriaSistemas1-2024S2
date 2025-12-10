@@ -1,3 +1,5 @@
+USE okh;
+
 DELIMITER $$
 CREATE FUNCTION add_evento(
 	p_username VARCHAR(255),

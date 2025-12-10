@@ -7,7 +7,7 @@ class UserModel
     {
         require_once __DIR__ . '/CustomPDO.php';
 
-        $my_pdo = CustomPDO::paraUser();
+        $my_pdo = CustomPDO::paraEndUser();
 
         try {
             $my_pdo->beginTransaction();
@@ -45,7 +45,7 @@ class UserModel
     {
         require_once __DIR__ . '/CustomPDO.php';
 
-        $my_pdo = CustomPDO::paraUser();
+        $my_pdo = CustomPDO::paraEndUser();
 
         try {
             $my_pdo->beginTransaction();
@@ -77,7 +77,7 @@ class UserModel
     {
         require_once __DIR__ . '/CustomPDO.php';
 
-        $my_pdo = CustomPDO::paraUser();
+        $my_pdo = CustomPDO::paraEndUser();
 
         try {
             $query = "CALL get_asistencias(:username)";
@@ -106,7 +106,7 @@ class UserModel
     {
         require_once __DIR__ . '/CustomPDO.php';
 
-        $my_pdo = CustomPDO::paraUser();
+        $my_pdo = CustomPDO::paraEndUser();
 
         try {
             $my_pdo->beginTransaction();

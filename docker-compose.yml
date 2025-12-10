@@ -1,0 +1,40 @@
+
+services:
+  # frontend + backend
+  webapp:
+    build: .
+    container_name: events
+    restart: always
+    ports:
+      - 7001:80
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=okh
+      - DB_ADMIN_USER=admin
+      - DB_ADMIN_PASSWORD='#1pass'
+      - DB_ENDUSER_USER=end_user
+      - DB_ENDUSER_PASSWORD='#1pass'
+    networks:
+      - events_net
+
+  db:
+    image: mariadb:10.11
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD='#1pass'
+      #- MYSQL_DATABASE=okh
+      #- MYSQL_USER=admin
+      #- MYSQL_PASSWORD='#1pass'
+    ports:
+      - 7000:3306
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d
+      #- db_data:/var/lib/mysql
+    networks:
+      - events_net
+
+networks:
+  events_net:

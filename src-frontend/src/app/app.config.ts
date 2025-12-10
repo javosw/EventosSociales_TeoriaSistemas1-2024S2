@@ -2,8 +2,8 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { credsInterceptor } from '../okh-api/interceptors/creds.interceptor';
-import { authInterceptor } from '../okh-api/interceptors/auth.interceptor';
+import { credsInterceptor } from './okh-api/interceptors/creds.interceptor';
+import { authInterceptor } from './okh-api/interceptors/auth.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [

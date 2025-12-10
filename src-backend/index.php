@@ -30,7 +30,7 @@ string(20) "/holaMundo/index.php"
 
 // CORS
 //header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Origin: http://localhost:4200");
+header("Access-Control-Allow-Origin: http://localhost:7001");
 header("Access-Control-Allow-Credentials: true");
 
 // PREFLIGHT

@@ -42,7 +42,7 @@ class AdminModel{
     public static function getEvents(){
         require_once __DIR__ . '/CustomPDO.php';
 
-        $my_pdo = CustomPDO::paraUser();
+        $my_pdo = CustomPDO::paraEndUser();
 
         try {
             $query = "SELECT * FROM eventos WHERE fue_revisado = false";
@@ -71,7 +71,7 @@ class AdminModel{
     public static function getComplaints(){
         require_once __DIR__ . '/CustomPDO.php';
 
-        $my_pdo = CustomPDO::paraUser();
+        $my_pdo = CustomPDO::paraEndUser();
 
         try {
             $my_pdo->beginTransaction();
@@ -103,7 +103,7 @@ class AdminModel{
     public static function delComplaint(){
         require_once __DIR__ . '/CustomPDO.php';
 
-        $my_pdo = CustomPDO::paraUser();
+        $my_pdo = CustomPDO::paraEndUser();
 
         try {
             $my_pdo->beginTransaction();
@@ -132,7 +132,7 @@ class AdminModel{
     public static function delEvent(){
         require_once __DIR__ . '/CustomPDO.php';
 
-        $my_pdo = CustomPDO::paraUser();
+        $my_pdo = CustomPDO::paraEndUser();
 
         try {
             $my_pdo->beginTransaction();

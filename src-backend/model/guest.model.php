@@ -108,7 +108,7 @@ class GuestModel{
     public static function getEvents(){
         require_once __DIR__ . '/CustomPDO.php';
 
-        $my_pdo = CustomPDO::paraUser();
+        $my_pdo = CustomPDO::paraEndUser();
 
         try {
             $query = "SELECT * FROM eventos WHERE plazas_ocupadas <= plazas AND conteo_denuncias <= 3 AND fue_revisado = true";
