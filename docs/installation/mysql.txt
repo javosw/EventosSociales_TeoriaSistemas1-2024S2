@@ -1,0 +1,4 @@
+# coneccion a base de datos mysql
+# no usar usuario root porque se supone que solo 
+# se puede acceder a el en local
+mysql -h 127.0.0.1 -P 7000 -u admin -p
